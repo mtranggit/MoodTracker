@@ -6,4 +6,7 @@ export const theme = {
   colorGrey: '#8E9AAF',
   space10: 10,
   space12: 12,
+  fontFamilyBold: 'Kalam-Bold',
+  fontFamilyRegular: 'Kalam-Regular',
+  fontFamilyLight: 'Kalam-Light',
 };
