@@ -7,6 +7,7 @@ import com.facebook.react.ReactRootView;
 import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
+import org.devio.rn.splashscreen.SplashScreen;
 
 public class MainActivity extends ReactActivity {
 
@@ -32,6 +33,7 @@ public class MainActivity extends ReactActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(null);
+    SplashScreen.show(this);
   }
   /**
    * Returns the instance of the {@link ReactActivityDelegate}. There the RootView is created and
