@@ -1,6 +1,6 @@
 import { groupBy } from 'lodash';
 import React from 'react';
-import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, StyleSheet } from 'react-native';
 import { VictoryPie } from 'victory-native';
 import { useAppContext } from '../App.provider';
 import { theme } from '../theme';
@@ -30,7 +30,14 @@ export const Analytics: React.FC = () => {
           theme.colorGrey,
           theme.colorWhite,
         ]}
-        style={{ labels: { fontSize: 30 } }}
+        style={{
+          labels: { fontSize: 30 },
+          data: {
+            fillOpacity: 0.8,
+            stroke: theme.colorWhite,
+            strokeWidth: 1,
+          },
+        }}
       />
     </ImageBackground>
   );
