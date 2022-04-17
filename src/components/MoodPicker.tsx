@@ -67,7 +67,9 @@ export const MoodPicker: React.FC<MoodPickerProps> = ({ onSelectMood }) => {
                   styles.moodItem,
                   isSelected ? styles.selectedMoodItem : undefined,
                 ]}>
-                <Text key={index}>{option.emoji}</Text>
+                <Text key={index} style={styles.emoji}>
+                  {option.emoji}
+                </Text>
               </Pressable>
               <Text style={styles.descriptionText}>
                 {isSelected ? option.description : null}
@@ -89,7 +91,7 @@ const styles = StyleSheet.create({
   moodList: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
   },
   moodItem: {
     height: 60,
@@ -125,6 +127,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: theme.colorWhite,
     fontFamily: theme.fontFamilyBold,
+  },
+  emoji: {
+    fontSize: 30,
+    textAlign: 'center',
   },
   button: {
     backgroundColor: theme.colorPurple,
